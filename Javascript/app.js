@@ -5,6 +5,8 @@ var Interval;
 var button = document.querySelector('button');
 var show_pi = document.querySelector('#show_pi');
 var square = document.querySelector('.square');
+var range = document.querySelector('#range');
+var speed = Math.floor(1/range.value);
 
 function Cal_Pi(){
     var x = Math.random();
@@ -23,11 +25,20 @@ function Cal_Pi(){
     pi = 4*c_count/count;
     show_pi.innerHTML = `${pi.toFixed(9)}`;
 
-    if(pi.toFixed(7)==3.1415926){
+    if(pi.toFixed(5)==3.14159){
         clearInterval(Interval);
+        show_pi.innerHTML = `${pi.toFixed(9)}`;
     }
 }
 
 button.addEventListener('click',()=>{
-    Interval = setInterval(Cal_Pi,1);
+    Interval = setInterval(Cal_Pi,speed);
+    console.log(speed);
+});
+
+range.addEventListener('input',()=>{
+    clearInterval(Interval);
+    speed = (1/range.value).toFixed(5);
+    console.log(speed);
+    Interval_New = setInterval(Cal_Pi,speed);
 });

@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Css/main.css">
-    <title>Calculate Pi</title>
+    <link rel="shortcut icon" href="./Svg/logo.svg" type="image/x-icon">
+    <title>ESTIMATING PI</title>
 </head>
 <body>
-    <p id="header">CALCULATE PI</p>
+    <p id="header">ESTIMATING PI</p>
     <div class="content">
         <div class="graph">
             <span class="square">
@@ -20,6 +21,10 @@
                 <p id="show_pi"></p>
             </span>
             <button>Calculate</button>
+            <div class="wrap_range">
+                <p>Estimating Speed</p>
+                <input type="range" name="range" id="range" min = "0.01" max = "10000" value="0.0001">
+            </div>
         </div>
     </div>
 

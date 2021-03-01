@@ -33,15 +33,15 @@ body {
   align-items: center;
   justify-content: center; }
   .content .graph {
-    width: 50%;
+    width: fit-content;
     padding: 10px 0px;
     display: flex;
     align-items: center;
     justify-content: center; }
     .content .graph .square {
       position: relative;
-      min-width: 300px;
-      min-height: 300px;
+      min-width: 200px;
+      min-height: 200px;
       border: 2px solid var(--my-black); }
       .content .graph .square::before {
         position: absolute;
@@ -60,7 +60,8 @@ body {
         border-radius: 100%;
         background-color: blue; }
   .content .text {
-    width: 50%;
+    width: 60%;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -75,9 +76,10 @@ body {
         min-width: 120px;
         min-height: 30px;
         margin-left: 5px;
+        text-align: center;
         background-color: white; }
     .content .text button {
-      margin-top: 10px;
+      margin-top: 20px;
       padding: 2px 6px;
       font-size: 15px;
       font-weight: bold;
@@ -87,4 +89,20 @@ body {
       cursor: pointer; }
       .content .text button:hover {
         transform: translate(1px, 2px);
-        transition: 0.3s ease-in-out; }
+        transition: 0.3s ease-in-out;
+        background-color: var(--my-black);
+        color: var(--my-white);
+        box-shadow: 2px 2px 6px var(--my-black); }
+      .content .text button:active {
+        transform: translate(0px, 0px); }
+    .content .text .wrap_range {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .content .text .wrap_range #range {
+        margin-left: 15px; }
+
+@media screen and (max-width: 640px) {
+  .content .text {
+    width: 100%; } }
