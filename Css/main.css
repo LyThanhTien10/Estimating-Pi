@@ -1,0 +1,90 @@
+@font-face {
+  font-family: Poppins;
+  src: url(../Font/Poppins.otf); }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins'; }
+
+:root {
+  --my-white: rgb(230, 230, 230);
+  --my-blue: rgb(0, 102, 255);
+  --my-black: rgb(70, 70, 70); }
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--my-white); }
+
+#header {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 40px;
+  color: var(--my-blue); }
+
+.content {
+  width: 50%;
+  margin: auto;
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center; }
+  .content .graph {
+    width: 50%;
+    padding: 10px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .content .graph .square {
+      position: relative;
+      min-width: 300px;
+      min-height: 300px;
+      border: 2px solid var(--my-black); }
+      .content .graph .square::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 100%;
+        border: 1px solid var(--my-black);
+        border-radius: 100%; }
+      .content .graph .square .dot {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 2px;
+        height: 2px;
+        border-radius: 100%;
+        background-color: blue; }
+  .content .text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .content .text .wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: bold; }
+      .content .text .wrap #show_pi {
+        min-width: 120px;
+        min-height: 30px;
+        margin-left: 5px;
+        background-color: white; }
+    .content .text button {
+      margin-top: 10px;
+      padding: 2px 6px;
+      font-size: 15px;
+      font-weight: bold;
+      border-radius: 5px;
+      outline: none;
+      border: 1px solid var(--my-black);
+      cursor: pointer; }
+      .content .text button:hover {
+        transform: translate(1px, 2px);
+        transition: 0.3s ease-in-out; }
